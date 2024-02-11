@@ -11,6 +11,13 @@
   </head>
   <body>
     <%- include('../partials/navbar.ejs') %>
-    <div class="wrapper"><%= title %> <%= date %> <%- html%></div>
+    <div class="wrapper">
+      <div class="post">
+        <div class="post-title"><%= title %></div>
+        <div class="post-date"><%= date %></div>
+        <hr />
+        <div class="post-content"><%- html%></div>
+      </div>
+    </div>
   </body>
 </html>
