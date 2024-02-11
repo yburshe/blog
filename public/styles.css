@@ -151,4 +151,12 @@ p {
   nav li {
     padding: 0.5rem;
   }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .wrapper img {
+    width: 100%;
+  }
 }
