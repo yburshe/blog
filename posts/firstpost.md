@@ -1,44 +1,34 @@
 ---
-title: Test Post
+title: My First Post
 date: 2024-02-10
 ---
 
-# This is definitely a test post
+# Header 1
 
-## Still is
+## Header 2
 
-### Just making sure everything works
+### Header 3
 
-**bold text**
+**Lorem ipsum dolor sit amet**, _consectetur adipiscing elit_. Morbi aliquam hendrerit nulla non efficitur. Etiam in mi finibus, rutrum risus vel, ullamcorper ligula. Etiam sit amet lectus tellus. Sed molestie mi eros, sed egestas diam lobortis venenatis. Praesent a euismod massa, ut cursus erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
-_italicized test_
+> In hac habitasse platea dictumst. Nunc posuere lorem in leo blandit, at dictum quam eleifend. Fusce fringilla leo non pellentesque iaculis.
 
-> blockquote
+Etiam eros tellus, eleifend non sem eget, dignissim rhoncus augue. Quisque dolor turpis, dignissim nec scelerisque eu, imperdiet et nisl. Ut metus neque, bibendum at semper vitae, tristique vel turpis. Vivamus at orci sit amet elit gravida tincidunt.
 
-1. Test
-2. Post
-3. List
+1. Apples
+2. Bananas
+3. Oranges
 
-- This
-- Is
-- Unordered
+- Milk
+- Cookies
+- Soda
+- Chips
 
-`codey code`
+[External Link](https://yashburshe.com)
 
-### Just making sure everything works Just making sure everything works Just making sure everything works Just making sure everything works Just making sure everything works Just making sure everything works
+`app.set("view engine", "ejs");`
+`app.set("port", 5500);`
+`app.use(express.static(__dirname + "/public/"));`
 
-### Just making sure everything works
+![Image](/images/rio.jpeg)
 
-### Just making sure everything works
-
-### Just making sure everything works
-
-### Just making sure everything works
-
-### Just making sure everything works
-
----
-
-[linkeroni](https://yashburshe.com)
-
-![whaaattt](/images/rio.jpeg)

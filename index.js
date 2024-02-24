@@ -10,6 +10,7 @@ app.set("port", 5500);
 
 app.use(express.static(__dirname + "/public/"));
 
+//Get the metadata from the post including Title and Date
 function getPostMetadata() {
   const directoryPath = path.join(__dirname, "posts");
   var files = fs.readdirSync(directoryPath);
@@ -37,14 +38,28 @@ function getPostMetadata() {
 
       file = file.slice(0, -3);
       obj.push({ path: file, title: title, date: new Date(date) });
-
-      console.log(obj);
     }
   });
+
+  //Sort the posts by their date (ascending)
   obj = obj.sort((objA, objB) => Number(objB.date) - Number(objA.date));
+  
+  //Format the dates to dd/mm/yy to show on /posts
+  obj.forEach(item => {
+    const originalDate = new Date(item.date);
+    const formattedDate = originalDate.toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: '2-digit',
+      year: '2-digit'
+    });
+
+    item.date = formattedDate;
+  });
+
   return obj;
 }
 
+//Convert md files in /posts to HTML for display
 function convertToHTML(name) {
   const directoryPath = path.join(__dirname, "posts/" + name + ".md");
 
@@ -77,44 +92,47 @@ function convertToHTML(name) {
 
     const html = marked.parse(md.replace(match[0], "").replace());
 
-    const blogpost = {
+    const post = {
       title: title,
       date: date,
       html: html,
     };
-    return { status: 1, blogpost: blogpost };
+    return { status: 1, post: post };
   } else {
     return error;
   }
 }
 
+//show list of blog posts
 app.get("/blog", async function (req, res) {
   const directoryPath = path.join(__dirname, "posts");
   var files = fs.readdirSync(directoryPath);
   files = files.map((file) => path.parse(file).name);
   const metadata = getPostMetadata();
-  console.log(metadata);
   res.render("pages/blog", { data: metadata });
 });
 
+//slug matching is done by the the name of the markdown file
 app.get("/blog/:name", function (req, res) {
   var name = req.params.name;
-  var postcontent = convertToHTML(name);
-  if (postcontent.status == 0) {
-    res.render("pages/error", { errormessage: postcontent.errormessage });
+  var post = convertToHTML(name);
+  if (post.status == 0) {
+    res.render("pages/error", { errormessage: post.errormessage });
   } else {
     res.render("pages/post", {
-      title: postcontent.blogpost.title,
-      date: postcontent.blogpost.date,
-      html: postcontent.blogpost.html,
+      title: post.post.title,
+      date: post.post.date,
+      html: post.post.html,
     });
   }
 });
 
+//Projects endpoint
 app.get("/projects", function (req, res) {
   res.render("pages/projects");
 });
 
+//Index endpoint
 app.get("/", function (req, res) {
   res.render("pages/index");
 });
