@@ -47,3 +47,13 @@ p{
 .code{
   font-family: monospace;
 }
+
+@media screen and (max-width: 440px) {
+  body{
+    padding: 2rem;
+  }
+
+  nav > ul{
+    padding: 0;
+  }
+}
