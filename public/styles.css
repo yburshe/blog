@@ -16,6 +16,10 @@ nav > ul > li > img{
   vertical-align: middle;
 }
 
+a{
+  color: black;
+}
+
 .external-links{
   display: flex;
   gap: 1rem;
