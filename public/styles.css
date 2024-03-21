@@ -1,7 +1,7 @@
 :root{
-  --blue-primary: #8cb0da;
-  --blue-accent: #7896b9;
-  --blue-darker: #5f7792;
+  --primary: #376294;
+  --accent: #577ba5;
+  --darker: #375272;
 }
 
 * {
@@ -61,13 +61,13 @@ nav {
 }
 
 .site-navigation {
-  background-color: var(--blue-primary);
+  background-color: var(--primary);
   /* padding: 1rem; */
   width: 100%;
 }
 
 .external-links {
-  background-color: var(--blue-accent);
+  background-color: var(--accent);
   /* padding: 0.6rem; */
   width: 100%;
 }
@@ -134,21 +134,21 @@ nav > ul > div > li > a:hover {
   padding: .5rem;
   margin: .4rem 0 0 0;
   align-items: center;
-  background-color: var(--blue-accent);
+  background-color: var(--accent);
   width: 100%;
   color: white;
 }
 
 .dropdown-button:hover{
-  background-color: var(--blue-primary);
+  background-color: var(--primary);
 }
 
 
 .project-dropdown{
-  background-color: var(--blue-primary);
+  background-color: var(--primary);
   padding: 1rem;
   color: white;
-  border: 3px solid var(--blue-darker);
+  border: 3px solid var(--darker);
 }
 
 .project-dropdown a{
@@ -160,7 +160,7 @@ nav > ul > div > li > a:hover {
 /* Blog post */
 
 .post-info{
-  border-bottom: 2px solid var(--blue-accent);
+  border-bottom: 2px solid var(--accent);
   margin-bottom: 1.3rem;
 }
 
