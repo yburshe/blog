@@ -3,11 +3,13 @@
   <%- include('../partials/head.ejs') %>
   <body>
     <%- include('../partials/navbar.ejs') %>
+    <section>
       <ul>
         <% for(var i=0; i<data.length; i++) {%>
           <li><a href="/blog/<%= data[i].path %>"><%=data[i].title%></a> [<%=data[i].date%>]</li>
       <%}%>
       %>
       </ul>
+    </section>
   </body>
 </html>

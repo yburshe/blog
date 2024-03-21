@@ -3,23 +3,35 @@
   <%- include('../partials/head.ejs') %>
   <body>
     <%- include('../partials/navbar.ejs') %>
-      <div class="header">
-        <h1>Yash Burshe</h1>
+    <section>
+    </div>
+    <div class="header">
+      <h1>Yash Burshe</h1>
+      <p>
+        Welcome to my website! This website is my one stop destination to
+        showcase my works to the world wide web
+      </p>
+    </div>
+    <div class="about-me">
+      <h2>About Me</h2>
+      <div class="about-me--grid">
         <p>
-          Welcome to my website! This website is my one stop destination to
-          showcase my works to the world wide web
+          I'm a Computer Science senior currently interning at Oneture in Mumbai.
+          I've studied Cybersecurity tools (
+          <span class="code">Wireshark, Hashcat, Metasploit</span>) and love doing
+          Capture The Flags. I'm also fluent in <span class="code">react</span>,
+          <span class="code">nodejs</span> and many libraries. My hobbies include
+          swimming, cycling and I love dogs.
         </p>
+        <img
+          class="photo"
+          src="/images/me.webp"
+          alt="A photo of me, Yash Burshe"
+        />
       </div>
-      <div class="about-me">
-        <h2>About Me</h2>
-        <img class="photo" src="/images/me.webp" alt="A photo of me, Yash Burshe" />
-        <p>
-          I'm a Computer Science senior currently interning at Oneture in
-          Mumbai.
-          I've studied Cybersecurity tools ( <span class="code">Wireshark, Hashcat, Metasploit</span>) and
-          love doing Capture The Flags. I'm also fluent in <span class="code">react</span>, <span class="code">nodejs</span> and many libraries.
-          My hobbies include swimming, cycling and I love dogs.
-        </p>
-      </div>
+    </div>
+    </section>
+
+    
   </body>
 </html>

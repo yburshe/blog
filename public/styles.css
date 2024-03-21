@@ -1,59 +1,130 @@
-nav{
-  display: flex;
-  justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav > ul{
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  list-style-type: none;
+body {
+  /* max-width: 600px; */
+  font-family: "Noto Sans", sans-serif;
 }
 
-nav > ul > li > img{
-  height: 16px;
-  width: 16px;
-  vertical-align: middle;
-}
-
-a{
-  color: black;
-}
-
-.external-links{
-  display: flex;
-  gap: 1rem;
-}
-
-.external-links > li > a {
-  text-decoration-style: double;
-}
-
-body{
+section {
+  padding: 2rem 0rem;
   max-width: 600px;
   margin: auto;
 }
 
-p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 12px 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav {
+  font-family: "Geologica", sans-serif;
+  font-weight: 350;
+}
+
+.code {
+  font-family: "Sometype Mono", monospace;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.site-navigation {
+  background-color: rgb(140, 176, 218);
+  /* padding: 1rem; */
+  width: 100%;
+}
+
+.external-links {
+  background-color: rgb(120, 150, 185);
+  /* padding: 0.6rem; */
+  width: 100%;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  width: 100%;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav > ul > div {
+  display: flex;
+  /* gap: 1.3rem; */
+  padding: 1rem;
+  padding-left: 0rem;
+
+}
+
+nav > ul > div > li > a > img {
+  height: 20px;
+  width: 20px;
+  vertical-align: bottom;
+}
+
+nav > ul > div > li > a {
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  /* vertical-align: middle; */
+}
+
+nav > ul > div > li > a:hover {
+  background-color: rgb(89, 118, 151);
+}
+
+
+a {
+  color: black;
+}
+
+.about-me--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+p {
   line-height: 20px;
 }
 
-.photo{
+.photo {
   width: 200px;
   height: 200px;
   object-fit: cover;
 }
 
-.code{
-  font-family: monospace;
+@media screen and (max-width: 440px) {
+  section{
+    width: auto;
+    padding: 1.2rem;
+  }
+  .site-navigation{
+    font-size: .8rem;
+  }
 }
 
-@media screen and (max-width: 440px) {
-  body{
-    padding: 2rem;
-  }
-
-  nav > ul{
-    padding: 0;
+@media screen and (max-width: 700px) {
+  .about-me--grid {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
   }
 }
