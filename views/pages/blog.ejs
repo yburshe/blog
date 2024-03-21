@@ -4,7 +4,7 @@
   <body>
     <%- include('../partials/navbar.ejs') %>
     <section>
-      <ul>
+      <ul class="post-list">
         <% for(var i=0; i<data.length; i++) {%>
           <li><a href="/blog/<%= data[i].path %>"><%=data[i].title%></a> [<%=data[i].date%>]</li>
       <%}%>

@@ -155,6 +155,12 @@ nav > ul > div > li > a:hover {
   color: white;
 }
 
+/* Posts */
+
+.post-list{
+  margin-left: 20px;
+}
+
 
 
 /* Blog post */
