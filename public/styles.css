@@ -1,3 +1,8 @@
+:root{
+  --blue-primary: #8cb0da;
+  --blue-accent: #7896b9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,13 +50,13 @@ nav {
 }
 
 .site-navigation {
-  background-color: #8cb0da;
+  background-color: var(--blue-primary);
   /* padding: 1rem; */
   width: 100%;
 }
 
 .external-links {
-  background-color: rgb(120, 150, 185);
+  background-color: var(--blue-accent);
   /* padding: 0.6rem; */
   width: 100%;
 }
@@ -109,6 +114,25 @@ p {
   width: 200px;
   height: 200px;
   object-fit: cover;
+}
+
+/* Blog post */
+
+.post-info{
+  border-bottom: 2px solid var(--blue-accent);
+  margin-bottom: 1.3rem;
+}
+
+.post-info > h2{
+  font-weight: 500;
+}
+
+.post ul, .post ol{
+  padding-left: 20px;
+}
+
+.post img{
+  width: 100%;
 }
 
 @media screen and (max-width: 440px) {
