@@ -3,6 +3,8 @@
   <%- include('../partials/head.ejs') %>
   <body>
     <%- include('../partials/navbar.ejs') %>
-    <section><%= errormessage %></section>
+    <section>
+      <h1>Error <%= errorcode %></h1>
+      <%= errormessage %></section>
   </body>
 </html>

@@ -1,6 +1,7 @@
 :root{
   --blue-primary: #8cb0da;
   --blue-accent: #7896b9;
+  --blue-darker: #5f7792;
 }
 
 * {
@@ -40,9 +41,19 @@ nav {
   font-weight: 350;
 }
 
+p {
+  line-height: 20px;
+}
+
+a {
+  color: black;
+}
+
 .code {
   font-family: "Sometype Mono", monospace;
 }
+
+/* Nav */
 
 nav {
   display: flex;
@@ -85,6 +96,7 @@ nav > ul > div > li > a > img {
 }
 
 nav > ul > div > li > a {
+  text-transform: uppercase;
   padding: 1rem;
   text-decoration: none;
   color: white;
@@ -95,10 +107,7 @@ nav > ul > div > li > a:hover {
   background-color: rgb(89, 118, 151);
 }
 
-
-a {
-  color: black;
-}
+/* Index */
 
 .about-me--grid {
   display: grid;
@@ -106,15 +115,40 @@ a {
   justify-items: center;
 }
 
-p {
-  line-height: 20px;
-}
-
 .photo {
   width: 200px;
   height: 200px;
   object-fit: cover;
 }
+
+/* Projects */
+
+.dropdown-button{
+  font-family: 'Geologica', sans-serif;
+  border: none;
+  background-color: white;
+  display: flex;
+  font-size: .8rem;
+  padding: .5rem;
+  margin: .4rem 0 0 0;
+  align-items: center;
+  background-color: var(--blue-accent);
+  width: 100%;
+  color: white;
+}
+
+.project-dropdown{
+  background-color: var(--blue-primary);
+  padding: 1rem;
+  color: white;
+  border: 3px solid var(--blue-darker);
+}
+
+.project-dropdown a{
+  color: white;
+}
+
+
 
 /* Blog post */
 
@@ -134,6 +168,8 @@ p {
 .post img{
   width: 100%;
 }
+
+/* Media queries */
 
 @media screen and (max-width: 440px) {
   section{

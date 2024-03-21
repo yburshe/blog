@@ -69,7 +69,7 @@ function convertToHTML(name) {
     return {
       status: "0",
       errorcode: "404",
-      errormessage: "The content you are looking for doesn't exist",
+      errormessage: "The content you are looking for doesn't exist.",
     };
   }
 
@@ -117,7 +117,7 @@ app.get("/blog/:name", function (req, res) {
   var name = req.params.name;
   var post = convertToHTML(name);
   if (post.status == 0) {
-    res.render("pages/error", { errormessage: post.errormessage });
+    res.render("pages/error", { errorcode: post.errorcode, errormessage: post.errormessage });
   } else {
     res.render("pages/post", {
       title: post.post.title,
