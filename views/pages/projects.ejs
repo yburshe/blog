@@ -5,59 +5,77 @@
     <%- include('../partials/navbar.ejs') %>
     <section class="projects">
       <div class="project1">
-        <h1>the Boiler Room</h1>
+        <h1>Steam2csv</h1>
         <p>
           Website to download a user's Steam library games in a .CSV file and
           view their statistics
         </p>
-        <button id="project1-button" class="dropdown-button" onclick="toggleSection('project1')">
-          Read More<img src="/images/chevron-down.svg" alt="">
+        <button
+          id="project1-button"
+          class="dropdown-button"
+          onclick="toggleSection('project1')"
+        >
+          Read More<img src="/images/chevron-down.svg" alt="" />
         </button>
-        <div style="display: none;" class="project-dropdown" id="project1">
+        <div style="display: none" class="project-dropdown" id="project1">
           <h2>Problem Statement</h2>
           <p>
-            Being an achievement hunter I had to frequently check on my gaming
-            backlog. I wanted a list of games I owned on Steam in a popular file
-            format so that I could import the list directly into an app like
-            Notion or Microsoft Excel. While developing an app for that, I added
-            features such as the ability to check the library of any public user
-            and also see the playtime of the games.
+            Being an achievement hunter I have to frequently check and record my
+            progress in my Steam games. I started using Notion to organize them
+            all but had to manually input my game library along with each game's
+            details indivually manually. That's where the idea for a tool to
+            convert my entire library to a .csv file at once came.
           </p>
           <h2>Technologies used</h2>
-          <p>HTML5, CSS3, ejs, Nodejs, Expressjs</p>
+          <p class="code">EJS, Node.js, Express</p>
           <h3>
-            Check it out here: <a target="_blank" href="https://boiler.yashburshe.com">Website</a>
+            Check it out here:
+            <a target="_blank" href="https://steam2csv.yashburshe.com"
+              >Website</a
+            >
           </h3>
         </div>
       </div>
       <div class="project2">
         <h1>SentinelShare</h1>
         <p>
-          A tamperproof system to share data between an organisation and a third
-          party using a zero trust architecture. Built for my capstone project
-          in Semester 7 along with Arushi Rai (<a
-            href="https://github.com/asr-24"
-            >Github</a
-          >) and Ridhima Mishra under our mentor, Dr. Pintu Shah
+          A tamperproof system to share data between an organisation and third
+          party vendors using a zero trust architecture. Built for my capstone project
+          in our final year along with <a href="https://www.linkedin.com/in/arushi-rai-cybersecurity/">Arushi Rai</a> and <a href="https://www.linkedin.com/in/ridhima-mishra-38318b1b6/">Ridhima Mishra</a> under our mentor, <a href="https://www.linkedin.com/in/pinturshah/">Dr. Pintu Shah</a>
         </p>
-        <button id="project2-button" class="dropdown-button" onclick="toggleSection('project2')">
-          Read More<img src="/images/chevron-down.svg" alt="">
+        <button
+          id="project2-button"
+          class="dropdown-button"
+          onclick="toggleSection('project2')"
+        >
+          Read More<img src="/images/chevron-down.svg" alt="" />
         </button>
-        <div style="display: none;" class="project-dropdown" id="project2">
+        <div style="display: none" class="project-dropdown" id="project2">
           <h2>Problem Statement</h2>
           <p>
             In the current data management practices being implemented at
-            organisations, there is a system of manual allotment of data to third
-            party vendors which serves as a single point of failure susceptible to
-            various risks like "whistle-blowers", disgruntled employees and human
-            errors. To mitigate these risks, we came up with a system which is
-            consensus-based, controlled and maintained by smart contracts
+            organisations, there is a system of manual allotment of data to
+            third party vendors which serves as a single point of failure
+            susceptible to various risks like "whistle-blowers", disgruntled
+            employees and human errors. To mitigate these risks, we came up with
+            a system which is consensus-based, controlled and maintained by
+            smart contracts
           </p>
           <h2>Technologies used</h2>
-          <p>MERN Stack, Helia, IPFS, Truffle</p>
+          <p class="code">
+            React, MongoDB,
+            <a target="_blank" href="https://github.com/ipfs/helia">Helia</a>,
+            <a target="_blank" href="https://archive.trufflesuite.com/"
+              >Truffle Suite</a
+            > (Now Deprecated)
+          </p>
           <h3>
             Check it out here:
-            <a target="_blank" href="https://github.com/asr-24/SentinelShare/tree/main">Github</a>
+            <a
+              target="_blank"
+              href="https://github.com/asr-24/SentinelShare/tree/main"
+              >Github</a
+            >
           </h3>
         </div>
       </div>
